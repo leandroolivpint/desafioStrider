@@ -1,0 +1,54 @@
+<div class="mygrid">
+  <div>
+          <mat-tab-group mat-align-tabs="start" dynamicHeight="true">
+              <mat-tab label="Todos">  
+                <div class="list" *ngFor="let tarefa of tarefas">
+                      <div class="itemLista" style="text-decoration: line-through" (click)="abrirImagem($event)" *ngIf="tarefa.flag == true; else elseBlock">
+                        {{tarefa.descricao}}
+                        <img [src]="tarefa.imgPath" *ngIf="tarefa.imgPath != ''">
+                      </div>
+                      <ng-template #elseBlock>
+                        <div class="itemLista">
+                            {{tarefa.descricao}}
+                        </div>
+                      </ng-template>
+                </div>
+              </mat-tab>
+              <mat-tab label="Pendentes">
+                  <mat-list role="list" *ngFor="let tarefa of tarefasPendentes">
+                      <mat-list-item>
+                          <div class="itemLista" (click)="abrirImagem()">
+                            {{tarefa.descricao}}
+                          </div>
+                        </mat-list-item>
+                    </mat-list>  
+              </mat-tab>
+              <mat-tab label="Feitos"> <div class="list" *ngFor="let tarefa of tarefasFeito">
+                  <div class="itemLista" style="text-decoration: line-through" (click)="abrirImagem($event)">
+                    {{tarefa.descricao}}
+                    <img [src]="tarefa.imgPath" *ngIf="tarefa.imgPath != ''">
+                  </div>
+            </div> </mat-tab>
+            </mat-tab-group>
+  </div>
+    
+<div>
+  <div class="centrarCard">
+              <form [formGroup]="formTask" (ngSubmit)="onSubmit()">
+                  <div>
+                    <label for="descricao" >Tarefa: </label>
+                    <input type="text"  class="imputClass" formControlName="descricao">
+                  </div>
+                  <div>
+                    <button mat-button>Enviar tarefa</button>
+                  </div>
+              </form>
+  </div>
+    
+</div>
+    
+</div>
+
+
+
+<router-outlet></router-outlet>

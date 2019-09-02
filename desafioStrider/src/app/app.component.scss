@@ -1,0 +1,49 @@
+.mygrid{
+    // display: grid;
+    // grid-template-columns: repeat(2 , 1fn);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    // align-items: center;
+    height: 1200px;
+}
+.mat-card{
+    width: 100%
+}
+.mat-list{
+    height: auto;
+}
+
+.centrarCard {
+    margin-top: 50%;
+    text-align: center;
+}
+.itemLista {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    padding: 15px;
+    width: 200px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.itemLista img {
+    display: none;
+    width: 100px;
+    height: 100px;
+    
+}
+
+.imputClass {
+    height: 30px;
+    border: 2px solid gray;
+    border-radius: 4px;
+}
+
+
+
