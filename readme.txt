@@ -4,6 +4,9 @@ Estrutura de diretórios:
  - desafioStrider (Diretório onde está a interface web)
  - desafioStriderM (Diretório onde está o projeto mobile)
 
+Link para o video de demostração 
+
+https://www.youtube.com/watch?v=F9ju04C3EoU
 
 Para rodar api 
 
